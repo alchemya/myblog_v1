@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block main %}
+    <h3 class="page-title">知乎想法转发抽奖程序beta</h3>
+    <h6 style="text-align: center">p.s.谢谢猹老师和山山老师，很开心能认识你们</h6>
+    <br>
+
+
+    <div class="jumbotron col-md-12">
+        <h4>抽奖链接:</h4>
+        <h5>{{ pin_url }}</h5>
+        <h4 >获奖人数:{{ price_number }}人</h4>
+
+        <h4 >抽奖范围:
+            {% if pin_gender == 'female' %}
+                女性转发者
+            {% elif pin_gender == 'male' %}
+                男性转发者
+            {% else %}
+                男女性别不限的转发者
+            {% endif %}</h4>
+    <br>
+        <h4>获奖用户信息如下：</h4>
+        <table class="table table-hover " style="word-break:break-all; word-wrap:break-all;">
+            <thead>
+            <tr>
+                <th>用户名</th>
+                <th>用户知乎链接</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in result %}
+                <tr>
+                    <td>{{ i.name }}</td>
+                    <td>{{ i.url }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+
+
+
+
+{% endblock main %}

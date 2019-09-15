@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block main %}
+    <h3 class="page-title">知乎想法转发抽奖程序beta</h3>
+    <h6 style="text-align: center">p.s.谢谢猹老师和山山老师，很开心能认识你们</h6>
+    <br>
+    <form action="/cha_prize/" method="post" class="comment-form">
+    {% csrf_token %}
+        <div class="row">
+            <div class="col-md-12" style="margin-bottom:40px;">
+
+                <label for="basic-url">知乎想法id或者对应的想法链接：</label>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon3">嘻嘻</span>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" name="url">
+
+                </div>
+                {{ form.url.errors }}
+                {{ errorss }}
+            </div>
+
+            <div class="col-md-6">
+                <label for="id_email">请选择抽取范围：</label>
+                <select class="form-control" name="type">
+                    <option value="all">男女都在范围内</option>
+                    <option value="female">只选择女生</option>
+                    <option value="male">只选择男生</option>
+                </select>
+                {{ form.type.errors }}
+
+            </div>
+            <div class="col-md-6">
+                <label for="id_email">你想抽取多少份奖品：</label>
+                <select class="form-control" name="price">
+                    <option value="1">1份</option>
+                    <option value="2">2份</option>
+                    <option value="3">3份</option>
+                    <option value="4">4份</option>
+                    <option value="5">5份</option>
+                    <option value="6">6份</option>
+                    <option value="7">7份</option>
+                    <option value="8">8份</option>
+                    <option value="9">9份</option>
+                    <option value="10">10份</option>
+                    <option value="11">11份</option>
+                    <option value="12">12份</option>
+                    <option value="13">13份</option>
+                    <option value="14">14份</option>
+                    <option value="15">15份</option>
+                    <option value="16">16份</option>
+                    <option value="17">17份</option>
+                    <option value="18">18份</option>
+                    <option value="19">19份</option>
+                    <option value="20">20份</option>
+                    <option value="21">21份</option>
+                    <option value="22">22份</option>
+                    <option value="23">23份</option>
+                    <option value="24">24份</option>
+                    <option value="25">25份</option>
+                    <option value="26">26份</option>
+                    <option value="27">27份</option>
+                    <option value="28">28份</option>
+                    <option value="29">29份</option>
+                    <option value="30">30份</option>
+                </select>
+                {{ form.price.errors }}
+            </div>
+            <!--   <div class="col-md-4">
+                    <label for="id_url">网址：</label>
+                    <input id="id_url" maxlength="200" name="url" type="url" />
+
+                </div>-->
+
+
+        </div>    <!-- row -->
+        <br>
+        <div class="col-md-4 center-block"></div>
+        <div class="col-md-4 center-block">
+            <input class="btn btn-primary  " style="padding: 5px 10px;font-size: 12px;line-height: 1.5;border-radius: 3px;" type="submit" value="提交数据">
+        </div>
+    </form>
+{% endblock main %}
