@@ -8,9 +8,9 @@ def post_comment(request,post_pk):
     if request.method=='POST':
         form=CommentForm(request.POST)
         if form.is_valid():
-            comment=form.save(commit=False)
-            comment.post=post
-            comment.save()
+         #  comment=form.save(commit=False)
+       #    comment.post=post
+        #   comment.save()
             return redirect(post)
         else:
             comment_list=post.comment_set.all()
@@ -20,4 +20,3 @@ def post_comment(request,post_pk):
             }
             return render(request,'blog/detail.html',context=connext)
     return redirect(post)
-

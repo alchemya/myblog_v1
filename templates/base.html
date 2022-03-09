@@ -1,9 +1,9 @@
-{% load static %}
+{% load staticfiles %}
 {% load blog_tags %}
 <!DOCTYPE html>
 <html>
 <head>
-    {% if not post %}
+        {% if not post %}
     <title>&Z</title>
     {% else %}
         <title>{{ post.title }}</title>
@@ -36,11 +36,10 @@
             <div class="col-md-4 col-sm-5 col-xs-8">
                 <div class="logo">
                     <h1><a href="{% url 'blog:index' %}">弗雷德里希<b>大王</b> </a></h1>
-                    <h3><a href="{% url 'blog:index' %}"><b>失恋</b> &amp; ZS</a></h3>
-      </div>
-                </div>
+<h3><a href="{% url 'blog:index' %}"><b>Alchemy </b>&Z</a></h3>
+      </div>               </div>
             </div><!-- col-md-4 -->
-            <div class="col-md-8 col-sm-7 col-xs-4">
+            <div class="col-md-8 col-sm-8 col-xs-4">
                 <nav class="main-nav" role="navigation">
                     <div class="navbar-header">
                         <button type="button" id="trigger-overlay" class="navbar-toggle">
@@ -52,7 +51,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li class="cl-effect-11"><a href="{% url 'blog:index' %}" data-hover="首页">首页</a></li>
                             <li class="cl-effect-11"><a href="{% url 'blog:blog_list' %}" data-hover="博客">博客</a></li>
-                            <li class="cl-effect-11"><a href="{% url 'blog:cha' %}" data-hover="猹奖">猹奖</a></li>
+                            <li class="cl-effect-11"><a href="{% url 'blog:cha' %}" data-hover="山奖">山奖</a></li>
                             <li class="cl-effect-11"><a href="{% url 'blog:about' %}" data-hover="关于">关于</a></li>
                             <li class="cl-effect-11"><a href="{% url 'blog:pray' %}" data-hover="打赏">打赏</a></li>
                         </ul>
@@ -149,9 +148,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <p class="copyright">&copy 2018 <a href="https://weibo.com/u/5917771585?nick=弗雷德里希大王" target="_blank" title="微博链接">弗雷德里希大王</a>
-                 &nbsp;&nbsp;<a href="https://www.zhihu.com/people/fldlxdw/activities" title="本人知乎" target="_blank">本人知乎</a>
-                </p>
+                <p class="copyright">&copy 2022 <a href="https://weibo.com/ios6" target="_blank" title="微博链接">弗雷德里希大王</a>
+             &nbsp;&nbsp;<a href="http://47.98.235.63/">yuchen.wiki</a>
+                &nbsp;&nbsp;<a href="https://www.zhihu.com/people/fldlxdw/activities" title="本人知乎" target="_blank">本人知乎</a>
+               
+ </p>
             </div>
         </div>
     </div>
@@ -164,7 +165,7 @@
         <ul>
             <li class="cl-effect-11"><a href="{% url 'blog:index' %}" data-hover="首页">首页</a></li>
             <li class="cl-effect-11"><a href="{% url 'blog:blog_list' %}" data-hover="博客">博客</a></li>
-             <li class="cl-effect-11"><a href="{% url 'blog:cha' %}" data-hover="猹奖">猹奖</a></li>
+            <li class="cl-effect-11"><a href="{% url 'blog:cha' %}" data-hover="山奖">山奖</a></li>
             <li class="cl-effect-11"><a href="{% url 'blog:about' %}" data-hover="关于">关于</a></li>
             <li class="cl-effect-11"><a href="{% url 'blog:pray' %}" data-hover="打赏">打赏</a></li>
         </ul>

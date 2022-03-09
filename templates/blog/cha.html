@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block main %}
     <h3 class="page-title">知乎想法转发抽奖程序beta</h3>
-    <h6 style="text-align: center">p.s.谢谢猹老师和山山老师，很开心能认识你们</h6>
+    <h6 style="text-align: center">p.s.谢谢山山叔叔的鼓励，使用时请复制app端的想法链接</h6>
     <br>
     <form action="/cha_prize/" method="post" class="comment-form">
     {% csrf_token %}
@@ -22,7 +22,7 @@
                 <label for="id_email">请选择抽取范围：</label>
                 <select class="form-control" name="type">
                     <option value="all">男女都在范围内</option>
-                    <option value="female">只选择女生</option>
+                    <option value="female">只选择妹子</option>
                     <option value="male">只选择男生</option>
                 </select>
                 {{ form.type.errors }}

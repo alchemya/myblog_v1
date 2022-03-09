@@ -1,4 +1,5 @@
-{% load static %}
+
+{%load static %}
 {% load blog_tags %}
 <!DOCTYPE html>
 <html>
@@ -32,11 +33,11 @@
             <div class="col-md-4 col-sm-5 col-xs-8">
                 <div class="logo">
                     <h1><a href="{% url 'blog:index' %}">弗雷德里希<b>大王</b> </a></h1>
-                    <h3><a href="{% url 'blog:index' %}"><b>失恋</b> &amp; ZS</a></h3>
+                    <h3><a href="{% url 'blog:index' %}"><b>Alchemy</b> &Z</a></h3>
       </div>
                 </div>
             </div><!-- col-md-4 -->
-            <div class="col-md-8 col-sm-7 col-xs-4">
+            <div class="col-md-8 col-sm-8 col-xs-4">
                 <nav class="main-nav" role="navigation">
                     <div class="navbar-header">
                         <button type="button" id="trigger-overlay" class="navbar-toggle">
@@ -48,6 +49,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li class="cl-effect-11"><a href="{% url 'blog:index' %}" data-hover="首页">首页</a></li>
                             <li class="cl-effect-11"><a href="{% url 'blog:blog_list' %}" data-hover="博客">博客</a></li>
+                           <li class="cl-effect-11"><a href="{% url 'blog:cha' %}" data-hover="山奖">山奖</a></li>
                             <li class="cl-effect-11"><a href="{% url 'blog:about' %}" data-hover="关于">关于</a></li>
                             <li class="cl-effect-11"><a href="{% url 'blog:pray' %}" data-hover="打赏">打赏</a></li>
                         </ul>
@@ -107,7 +109,7 @@
             {% if post_list.has_next %}
                 <a href="?page={{ post_list.next_page_number }}">下一页</a>
             {% endif %}
-            <a href="?page={{ post_list.paginator.num_pages }}">首页</a>
+            <a href="?page={{ post_list.paginator.num_pages }}">尾页</a>
         </ul>
     </div>
             </main>
@@ -166,7 +168,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <p class="copyright">&copy 2018 <a href="https://weibo.com/u/5917771585?nick=弗雷德里希大王" target="_blank" title="微博链接">弗雷德里希大王</a>
+                <p class="copyright">&copy 2020 <a href="https://weibo.com/u/5917771585?nick=弗雷德里希大王" target="_blank" title="微博链接">弗雷德里希大王</a>
                  &nbsp;&nbsp;<a href="https://www.zhihu.com/people/fldlxdw/activities" title="本人知乎" target="_blank">本人知乎</a>
                 </p>
             </div>
@@ -181,6 +183,7 @@
         <ul>
             <li class="cl-effect-11"><a href="{% url 'blog:index' %}" data-hover="首页">首页</a></li>
             <li class="cl-effect-11"><a href="{% url 'blog:blog_list' %}" data-hover="博客">博客</a></li>
+           <li class="cl-effect-11"><a href="{% url 'blog:cha' %}" data-hover="山奖">山奖</a></li>
             <li class="cl-effect-11"><a href="{% url 'blog:about' %}" data-hover="关于">关于</a></li>
             <li class="cl-effect-11"><a href="{% url 'blog:pray' %}" data-hover="打赏">打赏</a></li>
         </ul>
@@ -192,12 +195,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-

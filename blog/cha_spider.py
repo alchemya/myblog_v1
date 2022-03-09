@@ -30,7 +30,7 @@ class Cha:
         self.price_num=price_num
 
     def clean_url(self):
-        baseurl = 'https://api.zhihu.com/pins/{}/actions?limit=50&offset=0'
+        baseurl = 'https://api.zhihu.com/pins/{}/actions?limit=20&offset=0'
         if self.url.isdigit():
             self.url=baseurl.format(self.url)
         else:
@@ -40,7 +40,6 @@ class Cha:
 
     def get_first_json(self):
         z = requests.get(self.clean_url(), headers=headers, verify=False)
-        print(z.json())
         return z.json()
 
     def get_another_json(self,url):
@@ -110,3 +109,4 @@ class Cha:
 if __name__=='__main__':
     a=Cha('1142147007014629376','all','2')
     print(a.get_choice())
+

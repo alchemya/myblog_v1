@@ -3,7 +3,7 @@ from comment.forms import CommentForm
 from markdown.extensions.toc import TocExtension
 from django.utils.text import slugify
 from .models import Tag,Category
-
+from django.utils.html import strip_tags
 # Create your views here.
 from  django.http import HttpResponse
 # def index(request):
@@ -15,7 +15,7 @@ from  django.http import HttpResponse
 from .models import Post,Category
 import markdown
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.utils.html import strip_tags
+
 
 def index(request):
     post_list=Post.objects.all().order_by('-created_time')
@@ -29,8 +29,7 @@ def index(request):
         post_list = paginator.page(paginator.num_pages)
     ms=markdown.Markdown(extensions=['markdown.extensions.extra','markdown.extensions.codehilite',])
     for post in post_list:
-        post.excerpt=strip_tags(ms.convert(post.body))[:64]+'......'
-        # post.excerpt=post.body[:64]
+       post.excerpt=strip_tags(ms.convert(post.body))[:64]+'......'
     return render(request,'blog/index.html',context={'post_list':post_list})
 
 def detail(request, pk):
@@ -67,7 +66,6 @@ def search(request):
     if not post_list:
         error_message='请重新输入搜索内容'
         return render(request, 'blog/index.html', {'error_message': error_message, 'post_list': post_list})
-
     return render(request,'blog/index.html',{'error_message':error_message,'post_list':post_list})
 
 def blog_list(request):
@@ -89,7 +87,6 @@ def about(request):
     return render(request,'blog/about.html')
 def pray(request):
     return render(request,'blog/pray.html')
-
 
 from django import forms
 from django.forms import widgets
@@ -115,7 +112,7 @@ def get_cha(request):
                 url_or_number=form_c.cleaned_data.get('url')
                 type=form_c.cleaned_data.get('type')
                 price_number = form_c.cleaned_data.get('price')
-                print(url_or_number,price_number,type,'zzz')
+              
                 little_girl=Cha(url_or_number,type,price_number)
                 result=little_girl.get_choice()
                 pin_url='https://www.zhihu.com/pin/'+url_or_number if url_or_number.isdigit() else url_or_number
@@ -123,12 +120,9 @@ def get_cha(request):
                 end_tmp={'result':result,'price_number':price_number,'pin_url':pin_url,'pin_gender':type}
                 return render(request,'blog/cha_list.html',end_tmp)
             except Exception as e:
-                print(str(e))
-                return  render(request,'blog/cha.html',{'errorss':'你填写的网址信息无法正常识别或转发人数太低令系统失望'})
+                return  render(request,'blog/cha.html',{'errorss':'你填写的网址信息无法正常识别'+str(e)})
         else:
-            print(form_c.errors)
             return render(request,'blog/cha.html',{'form':form_c})
     else:
         return render(request,'blog/cha.html')
-
 

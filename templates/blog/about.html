@@ -32,11 +32,11 @@
             <div class="col-md-4 col-sm-5 col-xs-8">
                 <div class="logo">
                     <h1><a href="{% url 'blog:index' %}">弗雷德里希<b>大王</b> </a></h1>
-                    <h3><a href="{% url 'blog:index' %}"><b>失恋</b> &amp; ZS  </a></h3>
+                    <h3><a href="{% url 'blog:index' %}"><b>Alchemy</b> &Z  </a></h3>
       </div>
                 </div>
             </div><!-- col-md-4 -->
-            <div class="col-md-8 col-sm-7 col-xs-4">
+            <div class="col-md-8 col-sm-8 col-xs-4">
                 <nav class="main-nav" role="navigation">
                     <div class="navbar-header">
                         <button type="button" id="trigger-overlay" class="navbar-toggle">
@@ -48,6 +48,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li class="cl-effect-11"><a href="{% url 'blog:index' %}" data-hover="首页">首页</a></li>
                             <li class="cl-effect-11"><a href="{% url 'blog:blog_list' %}" data-hover="博客">博客</a></li>
+                            <li class="cl-effect-11"><a href="{% url 'blog:cha' %}" data-hover="山奖">山奖</a></li>
                             <li class="cl-effect-11"><a href="{% url 'blog:about' %}" data-hover="关于">关于</a></li>
                             <li class="cl-effect-11"><a href="{% url 'blog:pray' %}" data-hover="打赏">打赏</a></li>
                         </ul>
@@ -77,22 +78,24 @@
 						<h1 class="page-title">关于这个网站</h1>
 						<article class="post">
 							<div class="entry-content clearfix">
-								<figure class="img-responsive-center">
-									<img class="img-responsive" src="{% static "/images/yawen.png" %}" alt="Developer Image">
-								</figure>
+								<figure class="img-responsive-center">								<img class="img-responsive" src="https://s4.ax1x.com/2022/01/14/7867vV.png" alt="Developer Image">
+</figure>
 								<b>我认为人的一生是不值得过的，可以随时死去。唯一值得过的，最美好的事情，你要想做一件事情，彻底忘掉你的处境，来肯定它。要满怀激情做一件事情，生活才有意义，这绝对是生活最重要的真谛。</b>
-                                <p>这不是我讲的，是赵奕旗说的，这个页面里列举了他的博客地址,他是个很可爱的人。</p>
-								<p>这个网站的大部分东西都是从知乎上拉过来的，动机是因为我写的一篇童话被删了，莫名其妙，告诉我说是"政治敏感"。</p>
-                                <p>妈的。</p>
+                                <p>这不是我讲的，是赵奕旗说的，虽然他是微软最秃的工程师,但他是个很可爱的人,也是我过去最好的朋友。</p>
+								<p>阿珂是我生活中很美好的存在,但我很羞愧对她做了碇真嗣对明日香做过的事情。她让我敬畏于女性的骄傲与强大,原来粉黛之下,也有钢铁般的内心。
+</p>
+                                <p>我希望自己能被知识所吸引,宛若被她所吸引一样,这样才能从知识里获得乐趣和充实感。</p>
 								<div class="height-40px"></div>
 								<h2 class="title text-center">友情链接</h2>
 								<ul class="social">
 									<li class="facebook"><a href="https://www.zhihu.com/people/fldlxdw/activities">知乎</a></li>
-                                    <li class="tumblr"><a href="https://weibo.com/u/5917771585?nick=弗雷德里希大王">微博</a></li>
-									<li class="twitter"><a href="https://www.zhihu.com/people/nian-que-yi/activities">树大师</a></li>
-									<li class="google-plus"><a href="https://www.zhihu.com/people/an-guo-da-jiang-jun/activities">安国大将军</a></li>
-									<li class="google-plus"><a href="https://www.zhihu.com/people/LouisNicholson/activities">尼可</a></li>
-                                    <li class="tumblr"><a href="#">Ean.Zhao</a></li>
+                                    <li class="tumblr"><a href="https://weibo.com/ios6">微博</a></li>
+ <li class="google-plus"><a href="https://www.zhihu.com/people/deng-xin-yu-35/activitie
+s">Isra</a></li>
+<li class="twitter"><a href="https://wsdigest.com">华尔街文摘</a></li>
+                                                                        <li class="google-plus"><a href="http://www.yuanjunjun.com/">苍旻</a></li>
+									<li class="google-plus"><a href="http://www.zhihu.com/people/null-96-6">山山</a></li>
+<li class="google-plus"><a href="http://luckywhb.com">Lucien</a></li>
 								</ul>
 							</div>
 						</article>
@@ -104,7 +107,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<p class="copyright">&copy; 2018 fwang.fun</p>
+						<p class="copyright">&copy; 2022 yuchen.wiki 致认真生活的我  </p>
 					</div>
 				</div>
 			</div>
@@ -117,7 +120,8 @@
 				<ul>
 					<li class="cl-effect-11"><a href="{% url 'blog:index' %}" data-hover="首页">首页</a></li>
                     <li class="cl-effect-11"><a href="{% url 'blog:blog_list' %}" data-hover="博客">博客</a></li>
-                    <li class="cl-effect-11"><a href="{% url 'blog:about' %}" data-hover="关于">关于</a></li>
+                   <li class="cl-effect-11"><a href="{% url 'blog:cha' %}" data-hover="山奖">山奖</a></li>
+                   <li class="cl-effect-11"><a href="{% url 'blog:about' %}" data-hover="关于">关于</a></li>
                     <li class="cl-effect-11"><a href="{% url 'blog:pray' %}" data-hover="打赏">打赏</a></li>
 				</ul>
 			</nav>
