@@ -1,5 +1,5 @@
 django==1.10.6
 Markdown==2.6.8
-Pygments==2.2.0
+Pygments==2.15.0
 pytz==2016.10
 requests==2.27.1
